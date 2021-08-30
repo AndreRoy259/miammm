@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Miammm</title>
+  </head>
+  <body>
+    <!-- * Menu Creator -->
+    <div id="menu-creator" class="container">
+      <form id="form1" class="form">
+        <h2>Miammm!</h2>
+        <h3>Créer ton menu personalisé</h3>
+        <div class="form-control">
+          <label for="nomresto">Nom de ton restaurant</label>
+          <input type="text" id="nom-resto" placeholder="Entre le nom" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="entree1">Tes entrées</label>
+          <input type="text" id="entree1" placeholder="Entrée #1" />
+          <input type="text" id="entree2" placeholder="Entrée #2" />
+          <input type="text" id="entree3" placeholder="Entrée #3" />
+          <input type="text" id="entree4" placeholder="Entrée #4" />
+          <input type="text" id="entree5" placeholder="Entrée #5" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="plat1">Tes plats principaux</label>
+          <input type="text" id="plat1" placeholder="Plat #1" />
+          <input type="text" id="plat2" placeholder="Plat #2" />
+          <input type="text" id="plat3" placeholder="Plat #3" />
+          <input type="text" id="plat4" placeholder="Plat #4" />
+          <input type="text" id="plat5" placeholder="Plat #5" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="dessert1">Tes desserts</label>
+          <input type="text" id="dessert1" placeholder="Dessert #1" />
+          <input type="text" id="dessert2" placeholder="Dessert #2" />
+          <input type="text" id="dessert3" placeholder="Dessert #3" />
+          <input type="text" id="dessert4" placeholder="Dessert #4" />
+          <input type="text" id="dessert5" placeholder="Dessert #5" />
+          <small>Error message</small>
+        </div>
+        <!-- <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" />
+          <small>Error message</small>
+        </div> -->
+        <!-- <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" />
+          <small>Error message</small>
+        </div> -->
+        <!-- <div class="form-control">
+          <label for="password2">Confirm password</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Enter password again"
+          />
+          <small>Error message</small>
+        </div> -->
+        <button type="submit">Créer</button>
+      </form>
+    </div>
+
+    <!-- * Commande Client-->
+    <div id="order-creator" class="container hidden">
+      <form id="form2" class="form">
+        <h2>Miammm!</h2>
+        <h3>Créer la commande de ton client</h3>
+        <div class="form-control2">
+          <p>Entrées:</p>
+          <input type="radio" id="radio-entree1" name="radio-entree" value="entrée1" />  
+          <label id="label-entree1" for="radio-entree1">Entrée #1</label><br />
+          <input type="radio" id="radio-entree2" name="radio-entree" value="entrée2" />  
+          <label id="label-entree2" for="radio-entree1">Entrée #2</label><br />
+          <input type="radio" id="radio-entree3" name="radio-entree" value="entrée3" />  
+          <label id="label-entree3" for="radio-entree1">Entrée #3</label><br />
+          <input type="radio" id="radio-entree4" name="radio-entree" value="entrée4" />  
+          <label id="label-entree4" for="radio-entree1">Entrée #4</label><br />
+          <input type="radio" id="radio-entree5" name="radio-entree" value="entrée5" />  
+          <label id="label-entree5" for="radio-entree1">Entrée #5</label><br />
+          <br />
+        </div>
+        <div class="form-control2">
+          <p>Plat principal:</p>
+          <input type="radio" id="radio-plat1" name="radio-plat" value="plat1" />  
+          <label id="label-plat1" for="radio-plat1">Plat #1</label><br />
+          <input type="radio" id="radio-plat2" name="radio-plat" value="plat2" />  
+          <label id="label-plat2"for="radio-plat2">Plat #2</label><br />
+          <input type="radio" id="radio-plat3" name="radio-plat" value="plat3" />  
+          <label id="label-plat3"for="radio-plat3">Plat #3</label><br />
+          <input type="radio" id="radio-plat4" name="radio-plat" value="plat4" />  
+          <label id="label-plat4"for="radio-plat4">Plat #4</label><br />
+          <input type="radio" id="radio-plat5" name="radio-plat" value="plat5" />  
+          <label id="label-plat5"for="radio-plat5">Plat #5</label><br />
+          <br />
+        </div>
+        <div class="form-control2">
+          <p>Déssert:</p>
+          <input type="radio" id="radio-dessert1" name="radio-dessert" value="dessert1" />  
+          <label id="label-dessert1" for="radio-entree1">Déssert #1</label><br />
+          <input type="radio" id="radio-dessert2" name="radio-dessert" value="dessert2" />  
+          <label id="label-dessert2" for="radio-entree1">Déssert #2</label><br />
+          <input type="radio" id="radio-dessert3" name="radio-dessert" value="dessert3" />  
+          <label id="label-dessert3" for="radio-entree1">Déssert #3</label><br />
+          <input type="radio" id="radio-dessert4" name="radio-dessert" value="dessert4" />  
+          <label id="label-dessert4" for="radio-entree1">Déssert #4</label><br />
+          <input type="radio" id="radio-dessert5" name="radio-dessert" value="dessert5" />  
+          <label id="label-dessert5" for="radio-entree1">Déssert #5</label><br />
+          <br />
+        </div>
+
+
+        <!-- <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" />
+          <small>Error message</small>
+        </div> -->
+        <!-- <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" />
+          <small>Error message</small>
+        </div> -->
+        <!-- <div class="form-control">
+          <label for="password2">Confirm password</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Enter password again"
+          />
+          <small>Error message</small>
+        </div> -->
+        <button type="submit">Créer</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
