@@ -1,9 +1,13 @@
 //! QUERY SELECTORS
 const menuCreator = document.getElementById("menu-creator");
 const orderCreator = document.getElementById("order-creator");
+const meal = document.getElementById("meal");
 
 const form1 = document.getElementById("form1");
+const form2 = document.getElementById("form2");
+
 const nomResto = document.getElementById("nom-resto");
+const mealNomResto = document.getElementById("meal-nom-resto");
 const nomEntree1 = document.getElementById("entree1");
 const nomEntree2 = document.getElementById("entree2");
 const nomEntree3 = document.getElementById("entree3");
@@ -39,8 +43,6 @@ const labelDessert2 = document.getElementById("label-dessert2");
 const labelDessert3 = document.getElementById("label-dessert3");
 const labelDessert4 = document.getElementById("label-dessert4");
 const labelDessert5 = document.getElementById("label-dessert5");
-
-
 
 //! FUNCTIONS
 //* Show input error message
@@ -119,6 +121,8 @@ form1.addEventListener("submit", function (e) {
   // checkLength(password, 6, 25);
   // checkPasswordMatch(password, password2);
 
+  mealNomResto.innerHTML = nomResto.value;
+
   labelEntree1.innerHTML = nomEntree1.value;
   labelEntree2.innerHTML = nomEntree2.value;
   labelEntree3.innerHTML = nomEntree3.value;
@@ -139,5 +143,56 @@ form1.addEventListener("submit", function (e) {
 
   menuCreator.classList.toggle("hidden");
   orderCreator.classList.toggle("hidden");
+});
 
+form2.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // * Form Validation
+  // checkRequired([username, email, password, password2]);
+  // checkLength(username, 3, 15);
+  // checkEmail(email);
+  // checkLength(password, 6, 25);
+  // checkPasswordMatch(password, password2);
+
+  const radiosEntree = document.getElementsByName("radio-entree");
+  for (const radioEntree of radiosEntree) {
+    if (radioEntree.checked) {
+      console.log(radioEntree.value);
+      console.log(`label-${radioEntree.value}`);
+      const entreeChoisi = document.getElementById(`label-${radioEntree.value}`);
+      console.log(entreeChoisi.innerHTML);
+      const mealNomEntree = document.getElementById("meal-nom-entree");
+      mealNomEntree.innerHTML = entreeChoisi.innerHTML;
+    }
+  }
+
+  const radiosPlat = document.getElementsByName("radio-plat");
+  for (const radioPlat of radiosPlat) {
+    if (radioPlat.checked) {
+      console.log(radioPlat.value);
+      console.log(`label-${radioPlat.value}`);
+      const platChoisi = document.getElementById(`label-${radioPlat.value}`);
+      console.log(platChoisi.innerHTML);
+      const mealNomPlat = document.getElementById("meal-nom-plat");
+      mealNomPlat.innerHTML = platChoisi.innerHTML;
+    }
+  }
+
+  const radiosDessert = document.getElementsByName("radio-dessert");
+  for (const radioDessert of radiosDessert) {
+    if (radioDessert.checked) {
+      console.log(radioDessert.value);
+      console.log(`label-${radioDessert.value}`);
+      const dessertChoisi = document.getElementById(`label-${radioDessert.value}`);
+      console.log(dessertChoisi.innerHTML);
+      const mealNomDessert = document.getElementById("meal-nom-dessert");
+      mealNomDessert.innerHTML = dessertChoisi.innerHTML;
+    }
+  }
+
+
+
+  orderCreator.classList.toggle("hidden");
+  meal.classList.toggle("hidden");
 });
